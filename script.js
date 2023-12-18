@@ -26,6 +26,25 @@ $(document).ready(function () {
             });
     });
 
+
+
+    // Function to handle clicking on search history buttons
+    $('#history').on('click', 'button', function () {
+        const searchTerm = $(this).text().toLowerCase(); // Get the city name from the button text
+        const apiKey = 'eafdda80329f2e71b6ade7fada05e2fc';
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&appid=${apiKey}`;
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                displayWeather(data);
+                displayFiveDayForecast(searchTerm);
+            })
+            .catch(error => {
+                console.error('Error fetching weather data:', error);
+            });
+    });
+
     function displayWeather(weatherData) {
         // Display current weather conditions
         const city = weatherData.name;
