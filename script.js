@@ -5,10 +5,10 @@ $(document).ready(function () {
 
     $('#search-form').submit(function (event) {
         event.preventDefault();
-        const searchTerm = $('#search-input').val().trim();
+        const searchTerm = $('#search-input').val().trim().toLowerCase(); // Convert search term to lowercase
 
         if (searchTerm === '') {
-            return;
+            return
         }
 
         const apiKey = 'eafdda80329f2e71b6ade7fada05e2fc';
