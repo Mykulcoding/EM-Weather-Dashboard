@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  border: 1px solid #6112df;
 }
 
 * header.container-fluid {
@@ -56,6 +57,11 @@ header.container-fluid h1 {
 
 }
 
+#search-section {
+  grid-column: 1;
+  grid-row: span 2;
+}
+
 button {
   padding: 8px 16px;
   background-color: #007bff;
@@ -82,22 +88,21 @@ button {
 .row {
   display: grid;
   grid-template-columns: 20% 80%;
-  grid-template-rows: 10;
+  grid-template-rows: 10%;
   /* Height of the viewport */
 }
 
 
 #today {
-  /* background-color: #12b857;*/
+   background-color: #dfe9eb;
   /* Just for visualization */
   padding-top: 50px;
   padding-bottom: 30px;
   padding-left: 2%;
   padding-right: 10%;
-   /*border: 2px solid black;*/
+  border: 2px solid black;
+   position: sticky;
 }
-
-
 
 #forecast {
   /* background-color: #eb9595;*/
@@ -139,5 +144,11 @@ h2 {
 
 h3 {
   font-size:medium;
-  font-weight:600
+  font-weight:400;
+  margin-left: 1%;
+  padding-top: 5%;
+}
+
+#history button.active {
+  color: rgb(98, 0, 255); /* Change the color of the search result when button is clicked */
 }
