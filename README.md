@@ -56,7 +56,7 @@ If you'd like to contribute to this project, follow these steps:
 
 ## Website Image
 
-
+![Web_Image](https://github.com/Mykulcoding/EM-Weather-Dashboard/assets/147704782/962a02ba-d6c6-46c1-9785-3c68f7cf2309)
 
 ## Collaboration
 
