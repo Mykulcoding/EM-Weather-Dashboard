@@ -10,12 +10,11 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-
 * header.container-fluid {
   text-align: center;
   color: white;
-  background-color: blue;
-  width: 88%;
+  background-color: #361b61;
+  width: auto;
 }
 
 header.container-fluid h1 {
@@ -31,6 +30,8 @@ header.container-fluid h1 {
 
 #form-heading {
   margin-bottom: 20px;
+  padding-top: 2%;
+  padding-left: 2%;
 }
 
 .input-container {
@@ -42,6 +43,7 @@ header.container-fluid h1 {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  padding-left: 2%;
 }
 
 #search-input {
@@ -51,6 +53,7 @@ header.container-fluid h1 {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 10px;
+
 }
 
 button {
@@ -83,29 +86,21 @@ button {
   /* Height of the viewport */
 }
 
-.col-lg-3 {
-  background-color: #bde216;
-  /* Just for visualization */
-}
-
-/* .col-lg-9 {
-  display: grid;
-  grid-template-rows: 30% 70%;
-} */
 
 #today {
-  background-color: #12b857;
+  /* background-color: #12b857;*/
   /* Just for visualization */
-  padding-top: 10px;
+  padding-top: 50px;
   padding-bottom: 30px;
   padding-left: 2%;
   padding-right: 10%;
-  border: 2px solid black;
+   /*border: 2px solid black;*/
 }
 
 
+
 #forecast {
-  background-color: #eb9595;
+  /* background-color: #eb9595;*/
   /* Just for visualization */
   padding-top: 10px;
   padding-bottom: 30px;
@@ -123,14 +118,17 @@ button {
 #forecast .day-forecast {
   width: 18%;
   /* Adjust width to fit 5 items in a row */
-  margin-bottom: 30px;
+  margin-bottom: 28px;
+  margin-left: 1%;
+  margin-right: 1%;
   /* Adjust spacing between items */
-  border: 1px solid #ccc;
-  /* Just for visualization */
-  padding: 10px;
-  /* Just for visualization */
+  border: 1px solid #6112df;
+  padding: 2px;
   box-sizing: border-box;
   /* Ensure padding doesn't affect width */
+  background-color: #1e1829;
+  color: white;
+  
 }
 
 
@@ -140,6 +138,6 @@ h2 {
 }
 
 h3 {
-  font-size: small;
+  font-size:medium;
   font-weight:600
 }
