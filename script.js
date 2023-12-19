@@ -1,3 +1,7 @@
+// Declare apiKey in the global scope
+const apiKey = 'eafdda80329f2e71b6ade7fada05e2fc';
+
+
 $(document).ready(function () {
     let searchedCities = JSON.parse(localStorage.getItem('searchedCities')) || [];
 
@@ -48,7 +52,7 @@ $(document).ready(function () {
     function displayWeather(weatherData) {
         // Display current weather conditions
         const city = weatherData.name;
-        const temperature = weatherData.main.temp;
+        const temperature = (weatherData.main.temp - 273.15).toFixed(2); // Convert from Kelvin to Celsius and format to two decimal places
         const humidity = weatherData.main.humidity;
         const windSpeed = weatherData.wind.speed;
         const iconCode = weatherData.weather[0].icon;
@@ -118,18 +122,23 @@ $(document).ready(function () {
                 // Display each day's forecast
                 forecastData.forEach(dayForecast => {
                     const date = dayForecast.dt_txt.split(' ')[0];
-                    const temperature = dayForecast.main.temp;
+                    const temperature = (dayForecast.main.temp - 273.15).toFixed(2); // Convert from Kelvin to Celsius
+                    console.log(dayForecast.main.temp);
                     const humidity = dayForecast.main.humidity;
+                    const windSpeed = dayForecast.wind.speed; // Wind speed
+
+
                     const iconCode = dayForecast.weather[0].icon;
                     const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
 
                     // Append the forecast for each day to the #forecast element
                     $('#forecast').append(`
                         <div class="day-forecast">
-                            <p>Date: ${date}</p>
+                            <p> ${date}</p>
                             <img src="${iconUrl}" alt="Weather Icon">
-                            <p>Temperature: ${temperature}°C</p>
+                            <p>Temp: ${temperature}°C</p>
                             <p>Humidity: ${humidity}%</p>
+                            <p>Wind Speed: ${windSpeed} m/s</p> <!-- Display wind speed -->
                         </div>
                     `);
                 });
